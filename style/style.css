@@ -1,7 +1,7 @@
 @font-face {
-    font-family: 'Orbit';
-    src: url('/Font.ttf');
-  }
+  font-family: 'Orbit';
+  src: url('/Font.ttf') format('truetype');
+}
   body {
     font-family: Orbit !important;
       background-color: rgb(19, 19, 19);
