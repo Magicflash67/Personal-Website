@@ -67,13 +67,56 @@
 <br><br><br>
 <button id="button1" onclick="toggleContent('essay')">Hide Essay</button>
 <button id="button2" onclick="toggleContent('presentation')">Hide Presentation</button>
-<div id="essay"><h1>I believe that a lack of traits can and will lead to a less fulfilling lifestyle<h1>
+<div id="essay">
+  <h1>I believe that a lack of traits can and will lead to a less fulfilling lifestyle<h1>
     <p style="font-size: 18px;">
     this came from the quote a jack of all traits is a master of none but sure beats a master of one. from a documentary I was watching about Dan Povenimire, but the quote didn't take full effect until a few months later when I had the epiphany during an electrical project of liked what I was doing but I don't think I would want to do this as a job, and decided to take my chance at programming in java in robotics. over that summer I learned Java and how to program a robot and enjoyed doing it. Because of that, I have taken up a leadership position for this and the rest of my high school career. because of that one skill I learned in Java; decided I wanted to go into software development. In the school years of 2023-2024, I learned: Swift, Java, C, C++, C#, CoffeeScript, PyScripts, EMCA script, Python, and Assembly. That is not all I began to take out personal hobbies that aren't computer science and coding related. like learning how to cook and make complex meals from scratch, gardening, Psychology, and Economic reliance on Game theory. that better shaped who I am as a person other than a person who stays inside all day a makes websites for fun; and that people who decide that just want to get better at one thing or stop when they get into a comfortable place end up slowing or stopping their growth as a person, and comparing who you want to be like and want you to think your like. for example, on the outside, I'm more introverted nerd stereotype who likes computer science, and one of my favorite games is Stardew Valley. but on the inside, I do not spend that much time playing video games but more offline the biggest example of I do not have any social media, and the ones I don't I don't use or post on them like your support to do. but I also work cooking my favorite dish to make is crab Rangoon even though I don't make it often, or gardening/general yard work. it builds an invisible personality that many people don't really see. and those skills invisible or not make believe that to make a fulfilling life is building up parts of your character than being stagnant and doing the bare minimum.</p>
     </div>
     </div>
 <div id="presentation">
+  <div class="slideshow-container">
 
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 5</div>
+      <img src="./images/INTROIMAGE1.png" style="width:100%">
+      <div class="text" style="color:rgb(89, 0, 255)">Intro</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 5</div>
+      <img src="./images/QUOTEIMAGE2.png" style="width:100%">
+      <div class="text" style="color:rgb(89, 0, 255)">Quote</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 5</div>
+      <img src="./images/2223IMAGE3.png" style="width:100%">
+      <div class="text" style="color:rgb(89, 0, 255)">2022 to 2023</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 5</div>
+      <img src="./images/2324iMAGE4.png" style="width:100%">
+      <div class="text" style="color:rgb(89, 0, 255)">2023 to Now</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext"style="color:rgb(89, 0, 255)">5 / 5</div>
+      <img src="./images/ENDIMAGE5.png" style="width:100%">
+      <div class="text" style="color:rgb(89, 0, 255)" >Duel Enrollment</div>
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+      <span class="dot" onclick="currentSlide(4)"></span> 
+      <span class="dot" onclick="currentSlide(5)"></span> 
+    </div>
 </div>
 <script>
     function toggleContent(contentId) {
@@ -85,7 +128,34 @@
         }
     }
 </script>
-
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+  </script>
 
 </body>
 </html> 
